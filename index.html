@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Vis-Spectormeter</title>	
+    <meta charset="utf-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="icon" type="image/png" href="icovisispec.png"/>
+    <link rel="apple-touch-icon" href="icovisispec.png"/>
+    <link rel="apple-touch-startup-image" href="icovisispec.png" />
+    <link href="style_io.css" rel="stylesheet">
+    <script src="mediahelp.js"></script>
+</head>
+
+<body onload = "result = showImage();">
+
+<h1>VIS Spectrometer</h1>
+
+<main>
+
+        <div id="menue">
+                <div id="item"><a onclick="location.reload(true)"><img src="images/tab bar/home.png" width="58" height="43" /><a></div>
+                <div id="item"><a onclick = "resizeCanvas(300,120);"><img src="images/tab bar/setting.png" width="58" height="43" /></a></div>
+                <div id="item"><a onclick="print()"><img src="images/tab bar/search.png" width="58" height="43" /></a></div>
+                <div id="item"><a onclick="getInfo()"><img src="images/tab bar/about.png" width="58" height="43"  /></a></div>
+                <div id="item"><a onclick="getHelp()"><img src="images/tab bar/help.png" width="58" height="43" /></a></div>
+        </div>
+
+    <table>
+
+        <tr>
+            <td colspan = "2"> 
+                <input type="file" id="mypic" accept="image/*" capture="camera">
+            </td>           
+        </tr> 
+        <tr>
+            <td colspan="2">
+                <canvas id="myCanvasPic" width="300" height="120" ></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <canvas id="myCanvasSpec" width="300" height="120" ></canvas>
+            </td>
+        </tr>
+        <tr>
+                <td>&lambda; (700nm - 380nm)</td>
+                <td></div></td>
+        </tr>
+        <tr>
+            <td><div id="c_lambmax"></div></td>
+            <td><div id="c_coltemp"></div></td>
+        </tr>
+        <tr>
+            <td><div id="c_lambavg"></div></td>
+            <td><div id="c_tempname"></div></td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+</main>
+</body>
+</html>
